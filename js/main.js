@@ -5,16 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Page Loader ---
-  const loader = document.querySelector('.page-loader');
-  if (loader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => loader.classList.add('loaded'), 400);
-    });
-    // Fallback: remove loader after 3s max
-    setTimeout(() => loader.classList.add('loaded'), 3000);
-  }
-
   // --- Header Scroll Effect ---
   const header = document.querySelector('.header');
   let lastScroll = 0;
