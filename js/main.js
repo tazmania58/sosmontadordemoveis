@@ -271,40 +271,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Cursor follower (desktop only) ---
+  // --- Cursor Tool (desktop only) ---
   if (window.innerWidth > 1024) {
+    // Hide default cursor globally
+    document.body.style.cursor = 'none';
+
+    // Wrench SVG icon follower
     const cursor = document.createElement('div');
-    cursor.className = 'cursor-follower';
+    cursor.className = 'cursor-tool';
+    cursor.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8962E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+      </svg>`;
     cursor.style.cssText = `
-      position: fixed; top: 0; left: 0; width: 24px; height: 24px;
-      border: 1.5px solid rgba(200, 150, 46, 0.4); border-radius: 50%;
-      pointer-events: none; z-index: 9998; transition: all 0.15s ease-out;
-      transform: translate(-50%, -50%);
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 9998;
+      transform: translate(-4px, -4px) rotate(-45deg);
+      transition: transform 0.12s ease-out, opacity 0.2s ease;
+      opacity: 0;
+      filter: drop-shadow(0 2px 4px rgba(200,150,46,0.4));
     `;
     document.body.appendChild(cursor);
 
-    let cursorX = 0, cursorY = 0;
+    let mouseX = 0, mouseY = 0;
+    let posX = 0, posY = 0;
+    let visible = false;
 
     document.addEventListener('mousemove', (e) => {
-      cursorX = e.clientX;
-      cursorY = e.clientY;
-      cursor.style.left = cursorX + 'px';
-      cursor.style.top = cursorY + 'px';
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!visible) {
+        cursor.style.opacity = '1';
+        visible = true;
+      }
     });
 
-    // Enlarge cursor on interactive elements
+    document.addEventListener('mouseleave', () => {
+      cursor.style.opacity = '0';
+      visible = false;
+    });
+
+    // Smooth follow with requestAnimationFrame
+    function animateCursor() {
+      posX += (mouseX - posX) * 0.18;
+      posY += (mouseY - posY) * 0.18;
+      cursor.style.left = posX + 'px';
+      cursor.style.top  = posY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Spin on interactive elements
     document.querySelectorAll('a, button, .btn, .service-card, .partner-card').forEach(el => {
+      el.style.cursor = 'none';
       el.addEventListener('mouseenter', () => {
-        cursor.style.width = '48px';
-        cursor.style.height = '48px';
-        cursor.style.borderColor = 'rgba(200, 150, 46, 0.6)';
-        cursor.style.background = 'rgba(200, 150, 46, 0.06)';
+        cursor.style.transform = 'translate(-4px, -4px) rotate(135deg) scale(1.25)';
+        cursor.querySelector('svg').style.stroke = '#D4A94A';
+        cursor.style.filter = 'drop-shadow(0 3px 8px rgba(200,150,46,0.6))';
       });
       el.addEventListener('mouseleave', () => {
-        cursor.style.width = '24px';
-        cursor.style.height = '24px';
-        cursor.style.borderColor = 'rgba(200, 150, 46, 0.4)';
-        cursor.style.background = 'transparent';
+        cursor.style.transform = 'translate(-4px, -4px) rotate(-45deg) scale(1)';
+        cursor.querySelector('svg').style.stroke = '#C8962E';
+        cursor.style.filter = 'drop-shadow(0 2px 4px rgba(200,150,46,0.4))';
       });
     });
   }
