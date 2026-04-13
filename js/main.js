@@ -62,25 +62,107 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => observer.observe(el));
   }
 
-  // --- Parallax Effect ---
-  const parallaxElements = document.querySelectorAll('.parallax-bg');
+  // ============================================
+  //  PARALLAX SYSTEM
+  // ============================================
+
+  // --- 1. Scroll Parallax (backgrounds) ---
+  const parallaxElements = document.querySelectorAll('.parallax-bg, [data-parallax]');
 
   function handleParallax() {
     const scrollY = window.scrollY;
     parallaxElements.forEach(el => {
-      const speed = parseFloat(el.dataset.speed) || 0.3;
-      const rect = el.parentElement.getBoundingClientRect();
-      const visible = rect.bottom > 0 && rect.top < window.innerHeight;
-      if (visible) {
-        const yOffset = scrollY * speed;
-        el.style.transform = `translate3d(0, ${yOffset}px, 0)`;
+      const speed = parseFloat(el.dataset.speed || el.dataset.parallax) || 0.2;
+      const rect = el.closest('section, .hero, .cta-section')?.getBoundingClientRect() || el.parentElement.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        const centerOffset = rect.top + rect.height / 2 - window.innerHeight / 2;
+        el.style.transform = `translate3d(0, ${centerOffset * speed}px, 0)`;
       }
     });
   }
 
-  if (parallaxElements.length > 0) {
-    window.addEventListener('scroll', handleParallax, { passive: true });
-    handleParallax();
+  window.addEventListener('scroll', handleParallax, { passive: true });
+  handleParallax();
+
+  // --- 2. Hero multi-layer mouse parallax ---
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    const heroContent  = hero.querySelector('.hero__content');
+    const heroDeco1    = hero.querySelector('.hero__deco--tl');
+    const heroDeco2    = hero.querySelector('.hero__deco--br');
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const cx = (e.clientX - rect.left) / rect.width  - 0.5; // -0.5 to 0.5
+      const cy = (e.clientY - rect.top)  / rect.height - 0.5;
+
+      if (heroContent) heroContent.style.transform = `translate3d(${cx * 18}px, ${cy * 10}px, 0)`;
+      if (heroDeco1)   heroDeco1.style.transform   = `translate3d(${cx * -30}px, ${cy * -20}px, 0)`;
+      if (heroDeco2)   heroDeco2.style.transform   = `translate3d(${cx * 30}px, ${cy * 20}px, 0)`;
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      if (heroContent) heroContent.style.transform = '';
+      if (heroDeco1)   heroDeco1.style.transform   = '';
+      if (heroDeco2)   heroDeco2.style.transform   = '';
+    });
+  }
+
+  // --- 3. Tilt 3D nos cards de serviço ---
+  document.querySelectorAll('.service-card, .value-card, .partner-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const cx = (e.clientX - rect.left) / rect.width  - 0.5;
+      const cy = (e.clientY - rect.top)  / rect.height - 0.5;
+      const rotX = cy * -12;
+      const rotY = cx *  12;
+      card.style.transform     = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.03)`;
+      card.style.transition    = 'transform 0.1s ease';
+      card.style.willChange    = 'transform';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform  = '';
+      card.style.transition = 'transform 0.5s ease';
+    });
+  });
+
+  // --- 4. Parallax nas imagens internas (about, service-detail) ---
+  document.querySelectorAll('.about-intro__image img, .service-detail__image img').forEach(img => {
+    img.setAttribute('data-parallax', '0.08');
+    parallaxElements.length; // já está no array acima via [data-parallax]
+    window.addEventListener('scroll', () => {
+      const rect = img.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        const centerOffset = rect.top + rect.height / 2 - window.innerHeight / 2;
+        img.style.transform = `translate3d(0, ${centerOffset * 0.08}px, 0)`;
+      }
+    }, { passive: true });
+  });
+
+  // --- 5. Partículas flutuantes no hero ---
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    const particleCount = 18;
+    for (let i = 0; i < particleCount; i++) {
+      const p = document.createElement('span');
+      const size  = Math.random() * 4 + 2;
+      const left  = Math.random() * 100;
+      const delay = Math.random() * 6;
+      const dur   = Math.random() * 8 + 6;
+      const opacity = Math.random() * 0.25 + 0.05;
+      p.style.cssText = `
+        position: absolute;
+        width: ${size}px; height: ${size}px;
+        background: #C8962E;
+        border-radius: 50%;
+        left: ${left}%; bottom: -10px;
+        opacity: ${opacity};
+        pointer-events: none;
+        z-index: 2;
+        animation: floatParticle ${dur}s ${delay}s ease-in-out infinite;
+      `;
+      heroSection.appendChild(p);
+    }
   }
 
   // --- Hero Slider ---

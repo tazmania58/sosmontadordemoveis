@@ -1739,6 +1739,25 @@ body::after {
 }
 
 /* ============================
+   FLOATING PARTICLES
+   ============================ */
+@keyframes floatParticle {
+  0%   { transform: translateY(0)    translateX(0)    scale(1);   opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { transform: translateY(-55vh) translateX(20px)  scale(1.4); }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(-100vh) translateX(-10px) scale(0.6); opacity: 0; }
+}
+
+/* Smooth transition for hero content mouse parallax */
+.hero__content,
+.hero__deco--tl,
+.hero__deco--br {
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+/* ============================
    SCROLL ANIMATIONS
    ============================ */
 [data-animate] {
