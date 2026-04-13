@@ -1,0 +1,11 @@
+iter	score	pts	maxPts	action	result	keep
+0	20	25	126	Baseline	baseline	keep
+1	32	40	126	Add defer to main.js (5 pages)	+12pts	keep
+2	56	70	126	Move Google Fonts to HTML link+preconnect	+24pts	keep
+3	67	85	126	Add loading=lazy to all images (5 pages)	+11pts	keep
+4	75	95	126	Add decoding=async to all images (5 pages)	+8pts	keep
+5	83	105	126	Add width/height attributes to all images	+8pts	keep
+6	92	116	126	dns-prefetch + Cache-Control + 1yr cache	+9pts	keep
+7	94	119	126	Fix display=swap check (fonts in HTML)	+2pts	keep
+8	99	125	126	Convert images to WebP (sharp, 4MB->0.63MB)	+5pts	keep
+9	100	126	126	Minify CSS 38.8KB->29.5KB	+1pt	keep
