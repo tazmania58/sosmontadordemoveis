@@ -263,10 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Cursor Tool (desktop only) ---
   if (window.innerWidth > 1024) {
-    // Esconde cursor padrão
-    document.body.style.cursor = 'none';
-
-    // Wrench SVG — substitui o cursor
+    // Wrench SVG — sobre o cursor
     const cursor = document.createElement('div');
     cursor.className = 'cursor-tool';
     cursor.innerHTML = `
@@ -303,7 +300,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gira ao passar em elementos interativos
     document.querySelectorAll('a, button, .btn, .service-card, .partner-card').forEach(el => {
-      el.style.cursor = 'none';
       el.addEventListener('mouseenter', () => {
         cursor.style.transform = 'rotate(135deg) scale(1.3)';
         cursor.querySelector('svg').style.stroke = '#D4A94A';
