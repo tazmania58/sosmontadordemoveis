@@ -263,9 +263,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Cursor Tool (desktop only) ---
   if (window.innerWidth > 1024) {
-    // Hide default cursor globally
-    document.body.style.cursor = 'none';
-
     // Wrench SVG icon follower
     const cursor = document.createElement('div');
     cursor.className = 'cursor-tool';
@@ -313,7 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Spin on interactive elements
     document.querySelectorAll('a, button, .btn, .service-card, .partner-card').forEach(el => {
-      el.style.cursor = 'none';
       el.addEventListener('mouseenter', () => {
         cursor.style.transform = 'translate(-4px, -4px) rotate(135deg) scale(1.25)';
         cursor.querySelector('svg').style.stroke = '#D4A94A';
