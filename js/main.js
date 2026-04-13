@@ -263,7 +263,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Cursor Tool (desktop only) ---
   if (window.innerWidth > 1024) {
-    // Wrench SVG icon follower
+    // Esconde cursor padrão
+    document.body.style.cursor = 'none';
+
+    // Wrench SVG — substitui o cursor
     const cursor = document.createElement('div');
     cursor.className = 'cursor-tool';
     cursor.innerHTML = `
@@ -272,21 +275,21 @@ document.addEventListener('DOMContentLoaded', () => {
       </svg>`;
     cursor.style.cssText = `
       position: fixed; top: 0; left: 0;
-      pointer-events: none; z-index: 9998;
-      transform: translate(-4px, -4px) rotate(-45deg);
-      transition: transform 0.12s ease-out, opacity 0.2s ease;
+      pointer-events: none; z-index: 9999;
+      transform: rotate(-45deg);
+      transition: transform 0.15s ease, opacity 0.2s ease;
       opacity: 0;
       filter: drop-shadow(0 2px 4px rgba(200,150,46,0.4));
+      will-change: left, top;
     `;
     document.body.appendChild(cursor);
 
-    let mouseX = 0, mouseY = 0;
-    let posX = 0, posY = 0;
     let visible = false;
 
+    // Segue o mouse instantaneamente — sem lag
     document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top  = e.clientY + 'px';
       if (!visible) {
         cursor.style.opacity = '1';
         visible = true;
@@ -298,25 +301,16 @@ document.addEventListener('DOMContentLoaded', () => {
       visible = false;
     });
 
-    // Smooth follow with requestAnimationFrame
-    function animateCursor() {
-      posX += (mouseX - posX) * 0.18;
-      posY += (mouseY - posY) * 0.18;
-      cursor.style.left = posX + 'px';
-      cursor.style.top  = posY + 'px';
-      requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    // Spin on interactive elements
+    // Gira ao passar em elementos interativos
     document.querySelectorAll('a, button, .btn, .service-card, .partner-card').forEach(el => {
+      el.style.cursor = 'none';
       el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-4px, -4px) rotate(135deg) scale(1.25)';
+        cursor.style.transform = 'rotate(135deg) scale(1.3)';
         cursor.querySelector('svg').style.stroke = '#D4A94A';
-        cursor.style.filter = 'drop-shadow(0 3px 8px rgba(200,150,46,0.6))';
+        cursor.style.filter = 'drop-shadow(0 3px 8px rgba(200,150,46,0.7))';
       });
       el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-4px, -4px) rotate(-45deg) scale(1)';
+        cursor.style.transform = 'rotate(-45deg) scale(1)';
         cursor.querySelector('svg').style.stroke = '#C8962E';
         cursor.style.filter = 'drop-shadow(0 2px 4px rgba(200,150,46,0.4))';
       });
