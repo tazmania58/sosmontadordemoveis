@@ -1,10 +1,22 @@
 # SOS Montador de Móveis
 DirectoryIndex index.html index.php
+Options -MultiViews
+
+RewriteEngine On
 
 # Redirecionar HTTP -> HTTPS
-RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirecionar /pagina.html -> /pagina (canonical, SEO)
+RewriteCond %{THE_REQUEST} \s/+([^\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# Reescrita interna: /pagina -> pagina.html (sem redirect)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
 
 # Gzip compression
 <IfModule mod_deflate.c>

@@ -60,15 +60,15 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container">
-      <a href="index.html" class="header__logo">
+      <a href="/" class="header__logo">
         <img src="img/logo-header.png" alt="SOS Montadores" width="200" height="60" decoding="async">
       </a>
       <nav class="header__nav">
-        <a href="index.html" class="active">Início</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="empresa.html">Empresa</a>
-        <a href="clientes.html">Clientes</a>
-        <a href="contato.html">Contato</a>
+        <a href="/" class="active">Início</a>
+        <a href="servicos">Serviços</a>
+        <a href="empresa">Empresa</a>
+        <a href="clientes">Clientes</a>
+        <a href="contato">Contato</a>
       </nav>
       <a href="https://wa.me/5521968669742" class="header__cta" target="_blank" rel="noopener noreferrer">
         <span>Orçamento</span>
@@ -96,7 +96,7 @@
               <span>Solicitar orçamento</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="servicos.html" class="btn-ghost">
+            <a href="servicos" class="btn-ghost">
               <span>Ver serviços</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
             </a>
@@ -123,57 +123,30 @@
         </div>
 
         <div class="hero-right reveal d-2">
-          <div class="hero-card">
-            <div class="hero-card-badge">Ao vivo</div>
-
-            <div class="hero-card-head">
-              <span class="lbl">Ordem de Serviço</span>
-              <span class="id">#SOS-2026-0142</span>
-            </div>
-
-            <div class="hero-card-client">
-              <div class="hero-card-avatar">MR</div>
-              <div class="hero-card-client-info">
-                <p class="name">Mariana Ribeiro</p>
-                <p class="meta">Zona Sul · Botafogo</p>
+          <div class="hero-showcase">
+            <figure class="showcase-main">
+              <img src="img/servicos/corporativo.webp" alt="Projeto corporativo montado" width="640" height="512" decoding="async">
+              <span class="mark tl"></span>
+              <span class="mark tr"></span>
+              <span class="mark bl"></span>
+              <span class="mark br"></span>
+              <figcaption class="showcase-cap">
+                <span class="cap-num">Projeto 024</span>
+                <span class="cap-loc">Rio de Janeiro · 2026</span>
+              </figcaption>
+            </figure>
+            <figure class="showcase-side">
+              <img src="img/servicos/sala.webp" alt="Sala montada" width="280" height="380" decoding="async">
+            </figure>
+            <div class="showcase-sig">
+              <div class="sig-col">
+                <span class="sig-lbl">Obra</span>
+                <span class="sig-val">Escritório completo</span>
               </div>
-              <div style="margin-left:auto"><span class="hero-card-live">Em execução</span></div>
-            </div>
-
-            <div class="hero-card-row">
-              <span class="k">Serviço</span>
-              <span class="v">Guarda-roupa 4 portas</span>
-            </div>
-            <div class="hero-card-row">
-              <span class="k">Técnico</span>
-              <span class="v">Carlos S.</span>
-            </div>
-            <div class="hero-card-row">
-              <span class="k">Agendado</span>
-              <span class="v">Hoje · 14:30</span>
-            </div>
-            <div class="hero-card-row">
-              <span class="k">Valor</span>
-              <span class="v" style="color:var(--gold)">R$ 380,00</span>
-            </div>
-
-            <div class="hero-stepper">
-              <div class="hero-stepper-bar">
-                <div class="hero-stepper-fill"></div>
+              <div class="sig-col">
+                <span class="sig-lbl">Execução</span>
+                <span class="sig-val gold">3h · 38min</span>
               </div>
-              <div class="hero-steps">
-                <span class="step done">✓ Solicitado</span>
-                <span class="step done">✓ Agendado</span>
-                <span class="step current">● Em obra</span>
-                <span class="step">Entregue</span>
-              </div>
-            </div>
-
-            <div class="hero-card-thumbs">
-              <img src="img/servicos/sala.webp" alt="foto" width="48" height="48" decoding="async" loading="lazy">
-              <img src="img/servicos/home-office.webp" alt="foto" width="48" height="48" decoding="async" loading="lazy">
-              <img src="img/servicos/cozinha.webp" alt="foto" width="48" height="48" decoding="async" loading="lazy">
-              <div class="more">+8</div>
             </div>
           </div>
         </div>
@@ -234,7 +207,7 @@
             <span>Home Office</span>
             <span>Estantes</span>
           </div>
-          <a href="servicos.html" class="svc-link">Saber mais →</a>
+          <a href="servicos" class="svc-link">Saber mais →</a>
         </article>
 
         <article class="svc-card reveal d-1">
@@ -249,7 +222,7 @@
             <span>Showrooms</span>
             <span>NF</span>
           </div>
-          <a href="servicos.html" class="svc-link">Saber mais →</a>
+          <a href="servicos" class="svc-link">Saber mais →</a>
         </article>
 
         <article class="svc-card reveal d-2">
@@ -264,7 +237,7 @@
             <span>Remontagem</span>
             <span>Transporte</span>
           </div>
-          <a href="servicos.html" class="svc-link">Saber mais →</a>
+          <a href="servicos" class="svc-link">Saber mais →</a>
         </article>
       </div>
     </div>
@@ -421,7 +394,7 @@
           <span>WhatsApp</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="contato.html" class="btn-ghost">
+        <a href="contato" class="btn-ghost">
           <span>Formulário de contato</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
         </a>
@@ -444,11 +417,11 @@
         </div>
         <div class="footer__col">
           <h4>Navegação</h4>
-          <a href="index.html">Início</a>
-          <a href="servicos.html">Serviços</a>
-          <a href="empresa.html">Empresa</a>
-          <a href="clientes.html">Clientes</a>
-          <a href="contato.html">Contato</a>
+          <a href="/">Início</a>
+          <a href="servicos">Serviços</a>
+          <a href="empresa">Empresa</a>
+          <a href="clientes">Clientes</a>
+          <a href="contato">Contato</a>
         </div>
         <div class="footer__col">
           <h4>Contato</h4>

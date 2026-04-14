@@ -381,7 +381,162 @@ body.home .header__cta svg { width: 14px; height: 14px; }
   text-transform: uppercase;
 }
 
-/* === HERO SERVICE CARD MOCKUP === */
+/* === HERO SHOWCASE (photo-based, replaces old service card) === */
+.hero-showcase {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/4.3;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+.hero-showcase::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle at 40% 30%, var(--gold-glow), transparent 55%);
+  z-index: -1;
+  filter: blur(30px);
+  opacity: 0.5;
+}
+
+.showcase-main {
+  position: relative;
+  width: 82%;
+  aspect-ratio: 4/3.2;
+  border: 1px solid var(--coal-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin: 0;
+  background: var(--coal-3);
+}
+
+.showcase-main img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.showcase-main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(14,13,11,0.85));
+  pointer-events: none;
+}
+
+/* Corner technical marks on main photo */
+.showcase-main .mark {
+  position: absolute;
+  width: 18px; height: 18px;
+  border: 1px solid var(--gold);
+  z-index: 2;
+  opacity: 0.8;
+}
+.showcase-main .mark.tl { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+.showcase-main .mark.tr { top: 12px; right: 12px; border-left: none; border-bottom: none; }
+.showcase-main .mark.bl { bottom: 12px; left: 12px; border-right: none; border-top: none; }
+.showcase-main .mark.br { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+
+.showcase-cap {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+  right: 22px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--paper);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  z-index: 3;
+  margin: 0;
+}
+
+.showcase-cap .cap-num { color: var(--gold); font-weight: 600; }
+.showcase-cap .cap-loc { color: var(--paper-dim); }
+
+.showcase-side {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  width: 44%;
+  aspect-ratio: 3/4;
+  border: 8px solid var(--coal-2);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin: 0;
+  z-index: 3;
+  transform: rotate(2deg);
+  transition: transform .5s cubic-bezier(.2,.8,.2,1);
+}
+
+.showcase-side:hover { transform: rotate(0) translateY(-4px); }
+
+.showcase-side img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.showcase-side::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 70%, rgba(14,13,11,0.5));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Signature data strip */
+.showcase-sig {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  display: flex;
+  gap: 0;
+  background: var(--coal-3);
+  border: 1px solid var(--coal-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  z-index: 4;
+  overflow: hidden;
+}
+
+.showcase-sig .sig-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 20px;
+  border-right: 1px solid var(--coal-border);
+  min-width: 120px;
+}
+
+.showcase-sig .sig-col:last-child { border-right: none; }
+
+.showcase-sig .sig-lbl {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--paper-faded);
+}
+
+.showcase-sig .sig-val {
+  font-family: var(--f-sans);
+  font-size: 14px;
+  color: var(--paper);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.showcase-sig .sig-val.gold { color: var(--gold); }
+
+/* Keep old hero-card class as alias (backward compat if needed) */
 .hero-card {
   background: linear-gradient(180deg, var(--coal-3) 0%, var(--coal-2) 100%);
   border: 1px solid var(--coal-border);
