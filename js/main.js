@@ -5,20 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Rise-on-scroll animation (home redesign) ---
-  const riseElements = document.querySelectorAll('.rise');
-  if (riseElements.length > 0 && 'IntersectionObserver' in window) {
-    const riseObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          riseObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-    riseElements.forEach(el => riseObs.observe(el));
-  }
-
   // --- Header Scroll Effect ---
   const header = document.querySelector('.header');
   let lastScroll = 0;
