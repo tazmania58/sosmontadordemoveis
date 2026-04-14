@@ -2132,3 +2132,109 @@ body.home .footer {
 }
 
 .section-dark .pull-quote .pq-cite strong { color: var(--paper); }
+
+
+/* === PORTFOLIO GRID (clean 3x2 case study grid) === */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.portfolio-item {
+  aspect-ratio: 4/3;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--coal-2);
+  border: 1px solid var(--coal-border);
+  cursor: pointer;
+  transition: border-color .4s, transform .4s;
+}
+
+.portfolio-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.section-light .portfolio-item { background: var(--off-white); border-color: var(--cream-3); }
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1s cubic-bezier(.2,.8,.2,1), filter .4s;
+  filter: grayscale(30%) contrast(1.05);
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0) contrast(1);
+}
+
+/* Top corner number */
+.portfolio-item .p-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  background: rgba(14, 13, 11, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 150, 46, 0.35);
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Bottom info strip (always visible, subtle) */
+.portfolio-item .p-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px 18px;
+  background: linear-gradient(180deg, transparent, rgba(14, 13, 11, 0.9) 45%);
+  color: var(--paper);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateY(0);
+  transition: padding-bottom .4s;
+}
+
+.portfolio-item:hover .p-info { padding-bottom: 20px; }
+
+.portfolio-item .p-title {
+  font-family: var(--f-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.portfolio-item .p-meta {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+}
+
+.portfolio-item .p-meta .dot {
+  color: var(--gold);
+  margin: 0 4px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
