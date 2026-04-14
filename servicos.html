@@ -3,61 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Serviços de montagem de móveis residenciais e corporativos — cozinhas, salas, banheiros, escritórios e mais. SOS Montador de Móveis RJ.">
-  <meta property="og:title" content="Serviços de Montagem de Móveis — SOS Montador RJ">
-  <meta property="og:description" content="Montagem residencial e corporativa: cozinhas, salas, banheiros, home office, escritórios e lojas. Atendemos todo o Rio de Janeiro.">
+  <meta name="description" content="Serviços SOS Montador de Móveis — montagem residencial, corporativa e desmontagem de móveis no Rio de Janeiro. Orçamento em até 2 horas.">
+  <meta name="keywords" content="montagem de móveis, montagem residencial, montagem corporativa, desmontagem, RJ">
+  <meta name="author" content="SOS Montador de Móveis">
+  <meta property="og:title" content="Serviços — SOS Montador de Móveis">
+  <meta property="og:description" content="Montagem residencial, corporativa e desmontagem de móveis no Rio de Janeiro.">
   <meta property="og:image" content="https://sosmontadordemoveis.com.br/img/logo.png">
-  <meta property="og:url" content="https://sosmontadordemoveis.com.br/servicos.html">
+  <meta property="og:url" content="https://sosmontadordemoveis.com.br/servicos">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Serviços de Montagem de Móveis — SOS Montador RJ">
-  <meta name="twitter:description" content="Montagem residencial e corporativa no Rio de Janeiro. Solicite um orçamento!">
+  <meta name="twitter:title" content="Serviços — SOS Montador de Móveis">
+  <meta name="twitter:description" content="Montagem residencial, corporativa e desmontagem de móveis no Rio de Janeiro.">
   <meta name="twitter:image" content="https://sosmontadordemoveis.com.br/img/logo.png">
-  <link rel="canonical" href="https://sosmontadordemoveis.com.br/servicos.html">
   <link rel="icon" type="image/png" href="img/favicon.png">
-  <title>Serviços de Montagem de Móveis no RJ — SOS Montador</title>
+  <link rel="canonical" href="https://sosmontadordemoveis.com.br/servicos">
+  <title>Serviços — Montagem Residencial, Corporativa e Desmontagem | SOS Montadores</title>
+
+  <link rel="dns-prefetch" href="//wa.me">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Montagem de Móveis",
+    "serviceType": "Montagem de Móveis",
     "provider": {
       "@type": "LocalBusiness",
       "name": "SOS Montador de Móveis",
-      "url": "https://sosmontadordemoveis.com.br",
       "telephone": "+55-21-96866-9742",
       "address": { "@type": "PostalAddress", "addressLocality": "Rio de Janeiro", "addressRegion": "RJ", "addressCountry": "BR" }
     },
-    "areaServed": { "@type": "State", "name": "Rio de Janeiro" },
-    "serviceType": "Montagem de Móveis",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Serviços",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montagem de Cozinha Planejada" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montagem de Quarto e Sala" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montagem Corporativa e Escritório" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Montagem de Home Office" } }
-      ]
-    }
+    "areaServed": { "@type": "State", "name": "Rio de Janeiro" }
   }
-  </script>  <link rel="dns-prefetch" href="//wa.me">
-  <link rel="dns-prefetch" href="//maps.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-
+  </script>
 </head>
-<body>
+<body class="home">
 
-  <!-- Header -->
   <header class="header">
     <div class="container">
       <a href="/" class="header__logo">
-        <img src="img/logo-header.png" alt="SOS Montadores" loading="lazy" decoding="async" width="200" height="60">
+        <img src="img/logo-header.png" alt="SOS Montadores" width="200" height="60" decoding="async">
       </a>
       <nav class="header__nav">
         <a href="/">Início</a>
@@ -66,363 +58,200 @@
         <a href="clientes">Clientes</a>
         <a href="contato">Contato</a>
       </nav>
-      <a href="contato" class="btn btn--gold btn--sm header__cta">Orçamento</a>
-      <button class="menu-toggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="https://wa.me/5521968669742" class="header__cta" target="_blank" rel="noopener noreferrer">
+        <span>Orçamento</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
     </div>
   </header>
 
-  <!-- Mobile Nav -->
-  <nav class="mobile-nav">
-    <a href="/">Início</a>
-    <a href="servicos">Serviços</a>
-    <a href="empresa">Empresa</a>
-    <a href="clientes">Clientes</a>
-    <a href="contato">Contato</a>
-    <div class="mobile-nav__contact">
-      <a href="https://wa.me/5521968669742" target="_blank" rel="noopener noreferrer">WhatsApp: (21) 96866-9742</a>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <section class="hero hero--subpage">
-    <div class="hero__bg">
-      <img src="img/banners/banner-2.webp" alt="Serviços de montagem" class="parallax-bg" data-speed="0.15" loading="lazy" decoding="async" width="1200" height="800">
-    </div>
-    <div class="hero__overlay hero__overlay--strong"></div>
-    <div class="hero__deco hero__deco--tl"></div>
-    <div class="hero__deco hero__deco--br"></div>
-    <div class="container">
-      <div class="hero__content">
-        <div class="hero__label">
-          <span class="label">Nossos Serviços</span>
-        </div>
-        <h1 class="hero__title heading-display heading-xl">
-          Soluções em<br><em>Montagem</em>
-        </h1>
-        <p class="hero__subtitle">
-          Atendemos todos os tipos de ambientes com profissionalismo e qualidade.
-          Conheça nossos serviços especializados.
-        </p>
+  <section class="hero-page">
+    <div class="hero-page-grid-bg"></div>
+    <div class="container-n">
+      <div class="breadcrumb">
+        <a href="/">Início</a><span class="sep">/</span><span>Serviços</span>
       </div>
+      <h1 class="reveal">Três linhas. Um mesmo <span class="accent">padrão técnico</span>.</h1>
+      <p class="reveal d-1">Residencial, corporativo ou desmontagem — cada contrato passa pelo mesmo processo: orçamento transparente, agendamento pontual, execução limpa, garantia de 12 meses.</p>
     </div>
   </section>
 
-  <!-- Services Details -->
-  <section class="section">
-    <div class="container">
-
-      <!-- Residencial Header -->
-      <div class="section-header text-center" data-animate="fade-up">
-        <span class="label">Residencial</span>
-        <h2 class="heading-display heading-lg">Montagem <em>Residencial</em></h2>
-        <p class="subtitle" style="max-width: 600px; margin: 0 auto;">
-          Transformamos sua casa com montagem profissional de móveis em todos os ambientes.
-        </p>
-      </div>
-
-      <!-- Service 1: Cozinha -->
-      <div class="service-detail" data-animate="fade-up">
-        <div class="service-detail__image">
-          <img src="img/servicos/cozinha.webp" alt="Montagem de cozinha planejada" loading="lazy" decoding="async" width="600" height="400">
-          <span class="service-detail__badge">Mais Pedido</span>
+  <section class="section section-light">
+    <div class="container-n">
+      <article class="svc-detail reveal">
+        <div class="svc-detail-visual">
+          <img src="img/servicos/sala.webp" alt="Sala residencial montada" width="640" height="512" decoding="async" loading="lazy">
+          <span class="svc-tag">01 · Residencial</span>
         </div>
-        <div class="service-detail__content">
-          <span class="label">Cozinhas</span>
-          <h3 class="heading-display heading-sm">Cozinhas Planejadas e Moduladas</h3>
-          <p>
-            Realizamos a montagem completa de cozinhas planejadas e moduladas, com atenção
-            especial aos detalhes de acabamento, alinhamento de portas e gavetas, e instalação
-            de acessórios.
-          </p>
-          <ul class="service-detail__list">
-            <li>Armários superiores e inferiores</li>
-            <li>Bancadas e balcões</li>
-            <li>Instalação de puxadores e dobradiças</li>
-            <li>Ajuste e nivelamento preciso</li>
-            <li>Todas as marcas do mercado</li>
+        <div class="svc-detail-text">
+          <span class="kicker">Linha 01 · Residencial</span>
+          <h2>Montagem residencial com <span class="accent">acabamento impecável</span>.</h2>
+          <p>Quartos, salas, cozinhas, home offices. Móveis planejados, modulados ou pré-fabricados. Do Ikea ao sob medida — montamos com o mesmo rigor técnico. Ferramentas profissionais, proteção de piso, descarte de embalagens.</p>
+          <ul class="svc-detail-list">
+            <li>Guarda-roupas e closets</li>
+            <li>Cozinhas e despensas</li>
+            <li>Estantes e racks</li>
+            <li>Home office completo</li>
+            <li>Camas, baús e cômodas</li>
+            <li>Painéis de TV e bancadas</li>
           </ul>
+          <div class="svc-detail-specs">
+            <div class="sp"><p class="sp-lbl">Resposta</p><p class="sp-val">&lt; 2h</p></div>
+            <div class="sp"><p class="sp-lbl">Agendamento</p><p class="sp-val">24–48h</p></div>
+            <div class="sp"><p class="sp-lbl">Garantia</p><p class="sp-val">12 meses</p></div>
+            <div class="sp"><p class="sp-lbl">Pagamento</p><p class="sp-val">Pix · Cartão</p></div>
+          </div>
         </div>
-      </div>
+      </article>
+    </div>
+  </section>
 
-      <!-- Service 2: Sala -->
-      <div class="service-detail" data-animate="fade-up">
-        <div class="service-detail__image">
-          <img src="img/servicos/sala.webp" alt="Montagem de sala" loading="lazy" decoding="async" width="600" height="400">
+  <section class="section section-dark">
+    <div class="container-n">
+      <article class="svc-detail reverse reveal">
+        <div class="svc-detail-visual">
+          <img src="img/servicos/corporativo.webp" alt="Escritório corporativo montado" width="640" height="512" decoding="async" loading="lazy">
+          <span class="svc-tag">02 · Corporativo</span>
         </div>
-        <div class="service-detail__content">
-          <span class="label">Salas & Living</span>
-          <h3 class="heading-display heading-sm">Salas de Estar e Jantar</h3>
-          <p>
-            Montamos todos os tipos de móveis para sua sala, desde estantes modulares até
-            painéis de TV e racks. Trabalhamos com todas as marcas e garantimos acabamento
-            perfeito.
-          </p>
-          <ul class="service-detail__list">
-            <li>Estantes e racks para TV</li>
-            <li>Painéis e módulos decorativos</li>
-            <li>Mesas de jantar e aparadores</li>
-            <li>Cristaleiras e buffets</li>
+        <div class="svc-detail-text">
+          <span class="kicker">Linha 02 · Corporativo</span>
+          <h2>Escritórios inteiros, montados <span class="accent">fora do expediente</span>.</h2>
+          <p>Estações de trabalho, divisórias, gaveteiros, cadeiras ergonômicas, armários técnicos. Grandes volumes com cronograma, equipe dimensionada e nota fiscal. Trabalho em turnos noturnos e fins de semana para não parar sua operação.</p>
+          <ul class="svc-detail-list">
+            <li>Estações de trabalho</li>
+            <li>Divisórias e baias</li>
+            <li>Armários técnicos</li>
+            <li>Recepções e lounges</li>
+            <li>Showrooms e lojas</li>
+            <li>Salas de reunião</li>
           </ul>
+          <div class="svc-detail-specs">
+            <div class="sp"><p class="sp-lbl">Horário</p><p class="sp-val">Noite · FDS</p></div>
+            <div class="sp"><p class="sp-lbl">Equipe</p><p class="sp-val">2–8 pessoas</p></div>
+            <div class="sp"><p class="sp-lbl">NF</p><p class="sp-val">Emitida</p></div>
+            <div class="sp"><p class="sp-lbl">Seguro</p><p class="sp-val">Incluso</p></div>
+          </div>
         </div>
-      </div>
+      </article>
+    </div>
+  </section>
 
-      <!-- Service 3: Banheiro -->
-      <div class="service-detail" data-animate="fade-up">
-        <div class="service-detail__image">
-          <img src="img/servicos/banheiro.webp" alt="Montagem de banheiro" loading="lazy" decoding="async" width="600" height="400">
+  <section class="section section-light">
+    <div class="container-n">
+      <article class="svc-detail reveal">
+        <div class="svc-detail-visual">
+          <img src="img/servicos/home-office.webp" alt="Desmontagem de móveis" width="640" height="512" decoding="async" loading="lazy">
+          <span class="svc-tag">03 · Desmontagem</span>
         </div>
-        <div class="service-detail__content">
-          <span class="label">Banheiros</span>
-          <h3 class="heading-display heading-sm">Banheiros e Lavabos</h3>
-          <p>
-            Cuidado especial na montagem de móveis para áreas úmidas.
-            Garantimos vedação adequada e instalação segura de gabinetes e armários.
-          </p>
-          <ul class="service-detail__list">
-            <li>Gabinetes e armários para banheiro</li>
-            <li>Espelheiras e nichos</li>
-            <li>Módulos suspensos</li>
-            <li>Vedação e proteção contra umidade</li>
+        <div class="svc-detail-text">
+          <span class="kicker">Linha 03 · Desmontagem</span>
+          <h2>Desmontagem cuidadosa, <span class="accent">remontagem garantida</span>.</h2>
+          <p>Desmontamos com método: numeramos as peças, catalogamos ferragens, protegemos cantos e superfícies. Preparamos para mudança, depósito ou remontagem em outro endereço — sem perder peça, sem danificar o móvel.</p>
+          <ul class="svc-detail-list">
+            <li>Desmontagem para mudanças</li>
+            <li>Embalagem técnica</li>
+            <li>Numeração de peças</li>
+            <li>Remontagem em outro endereço</li>
+            <li>Depósito provisório</li>
+            <li>Transporte sob cotação</li>
           </ul>
+          <div class="svc-detail-specs">
+            <div class="sp"><p class="sp-lbl">Embalagem</p><p class="sp-val">Incluída</p></div>
+            <div class="sp"><p class="sp-lbl">Ferragens</p><p class="sp-val">Catalogadas</p></div>
+            <div class="sp"><p class="sp-lbl">Etiquetas</p><p class="sp-val">Numeradas</p></div>
+            <div class="sp"><p class="sp-lbl">Remontagem</p><p class="sp-val">Garantida</p></div>
+          </div>
         </div>
-      </div>
-
-      <!-- Service 4: Home Office -->
-      <div class="service-detail" data-animate="fade-up">
-        <div class="service-detail__image">
-          <img src="img/servicos/home-office.webp" alt="Montagem home office" loading="lazy" decoding="async" width="600" height="400">
-        </div>
-        <div class="service-detail__content">
-          <span class="label">Home Office</span>
-          <h3 class="heading-display heading-sm">Escritório em Casa</h3>
-          <p>
-            Monte seu ambiente de trabalho em casa com móveis funcionais e organizados.
-            Garantimos ergonomia e praticidade para sua rotina de trabalho.
-          </p>
-          <ul class="service-detail__list">
-            <li>Mesas e escrivaninhas</li>
-            <li>Estantes e organizadores</li>
-            <li>Gaveteiros e armários</li>
-            <li>Painéis e prateleiras</li>
-          </ul>
-        </div>
-      </div>
-
+      </article>
     </div>
   </section>
 
-  <!-- Corporativo Section -->
-  <section class="section section--dark">
-    <div class="container">
-      <div class="section-header text-center" data-animate="fade-up">
-        <span class="label">Corporativo</span>
-        <h2 class="heading-display heading-lg" style="color: var(--white);">Montagem <em>Corporativa</em></h2>
-        <p class="subtitle subtitle--light" style="max-width: 600px; margin: 0 auto;">
-          Atendemos empresas de todos os portes com eficiência e agilidade. Escritórios,
-          lojas, clínicas e espaços comerciais.
-        </p>
+  <section class="section section-dark">
+    <div class="container-n">
+      <div class="section-head">
+        <span class="section-eyebrow reveal">Processo</span>
+        <h2 class="section-title-n reveal d-1">Do contato à <span class="accent">entrega</span>.</h2>
+        <p class="section-sub reveal d-2">Quatro etapas claras, aplicadas em todos os serviços.</p>
       </div>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-        <!-- Corporate Card 1 -->
-        <div class="service-card" data-animate="fade-up" data-delay="1" style="aspect-ratio: 16/9;">
-          <div class="service-card__image">
-            <img src="img/servicos/corporativo.webp" alt="Montagem de escritório" loading="lazy" decoding="async" width="600" height="400">
-          </div>
-          <div class="service-card__overlay"></div>
-          <div class="service-card__content">
-            <h3 class="service-card__title">Escritórios</h3>
-            <p class="service-card__desc">
-              Mesas, estações de trabalho, armários, gaveteiros e divisórias.
-              Montagem completa para seu ambiente de trabalho.
-            </p>
-          </div>
+      <div class="process-timeline reveal d-2">
+        <div class="process-step">
+          <div class="ps-num">01</div>
+          <span class="ps-label">Início</span>
+          <h4>Contato</h4>
+          <p>WhatsApp, telefone ou formulário. Fotos e localização — respondemos em &lt; 2h com orçamento firme.</p>
         </div>
-        <!-- Corporate Card 2 -->
-        <div class="service-card" data-animate="fade-up" data-delay="2" style="aspect-ratio: 16/9;">
-          <div class="service-card__image">
-            <img src="img/servicos/loja.webp" alt="Montagem de loja" loading="lazy" decoding="async" width="600" height="400">
-          </div>
-          <div class="service-card__overlay"></div>
-          <div class="service-card__content">
-            <h3 class="service-card__title">Lojas & Showrooms</h3>
-            <p class="service-card__desc">
-              Vitrines, prateleiras, balcões, gôndolas e mobiliário comercial.
-              Experiência em projetos de grande porte.
-            </p>
-          </div>
+        <div class="process-step">
+          <div class="ps-num">02</div>
+          <span class="ps-label">Agenda</span>
+          <h4>Agendamento</h4>
+          <p>Data confirmada em 24–48h. Nome do técnico, horário de chegada e ferragens pré-checadas.</p>
         </div>
-      </div>
-
-      <!-- Features corporativo -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px;">
-        <div class="value-card" data-animate="fade-up" data-delay="1" style="background: var(--charcoal-light); border-color: rgba(255,255,255,0.06);">
-          <div class="value-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h4 class="value-card__title" style="color: var(--text-on-dark);">Rapidez</h4>
-          <p class="value-card__text" style="color: var(--text-on-dark-muted);">
-            Prazos agressivos para que sua empresa esteja funcionando o mais rápido possível.
-          </p>
+        <div class="process-step">
+          <div class="ps-num">03</div>
+          <span class="ps-label">Obra</span>
+          <h4>Execução</h4>
+          <p>Ferramentas próprias, proteção de piso, descarte de embalagem. Trabalho limpo e silencioso.</p>
         </div>
-        <div class="value-card" data-animate="fade-up" data-delay="2" style="background: var(--charcoal-light); border-color: rgba(255,255,255,0.06);">
-          <div class="value-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h4 class="value-card__title" style="color: var(--text-on-dark);">Equipes Grandes</h4>
-          <p class="value-card__text" style="color: var(--text-on-dark-muted);">
-            Escalamos equipes conforme o tamanho do projeto para cumprir qualquer demanda.
-          </p>
-        </div>
-        <div class="value-card" data-animate="fade-up" data-delay="3" style="background: var(--charcoal-light); border-color: rgba(255,255,255,0.06);">
-          <div class="value-card__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <h4 class="value-card__title" style="color: var(--text-on-dark);">Nota Fiscal</h4>
-          <p class="value-card__text" style="color: var(--text-on-dark-muted);">
-            Emitimos nota fiscal para todas as empresas. Transparência total.
-          </p>
+        <div class="process-step">
+          <div class="ps-num">04</div>
+          <span class="ps-label">Fim</span>
+          <h4>Entrega</h4>
+          <p>Testamos gavetas, níveis, dobradiças. Limpamos o ambiente. Garantia de 12 meses ativa.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header text-center" data-animate="fade-up">
-        <span class="label">Como Funciona</span>
-        <h2 class="heading-display heading-lg">Processo <em>Simples</em></h2>
-        <p class="subtitle" style="max-width: 600px; margin: 0 auto;">
-          Em 4 passos simples, seus móveis estarão montados com perfeição.
-        </p>
-      </div>
-      <div class="process-steps">
-        <div class="process-step" data-animate="fade-up" data-delay="1">
-          <div class="process-step__number">1</div>
-          <h4 class="process-step__title">Contato</h4>
-          <p class="process-step__desc">
-            Entre em contato via WhatsApp ou formulário e descreva o serviço desejado.
-          </p>
-        </div>
-        <div class="process-step" data-animate="fade-up" data-delay="2">
-          <div class="process-step__number">2</div>
-          <h4 class="process-step__title">Orçamento</h4>
-          <p class="process-step__desc">
-            Enviamos um orçamento detalhado e transparente, sem surpresas.
-          </p>
-        </div>
-        <div class="process-step" data-animate="fade-up" data-delay="3">
-          <div class="process-step__number">3</div>
-          <h4 class="process-step__title">Agendamento</h4>
-          <p class="process-step__desc">
-            Agendamos a data e horário que melhor se encaixam na sua rotina.
-          </p>
-        </div>
-        <div class="process-step" data-animate="fade-up" data-delay="4">
-          <div class="process-step__number">4</div>
-          <h4 class="process-step__title">Montagem</h4>
-          <p class="process-step__desc">
-            Nossa equipe realiza a montagem com qualidade e limpeza total do ambiente.
-          </p>
-        </div>
+  <section class="cta-final-n">
+    <div class="cta-inner">
+      <span class="section-eyebrow reveal">Pronto para começar</span>
+      <h2 class="reveal d-1">Qual é o seu <span class="accent">próximo móvel</span>?</h2>
+      <p class="reveal d-2">Envie fotos e endereço. Respondemos em menos de 2 horas com data, técnico e valor fechado.</p>
+      <div class="cta-ctas reveal d-3">
+        <a href="https://wa.me/5521968669742?text=Olá!%20Gostaria%20de%20um%20orçamento" class="btn-gold" target="_blank" rel="noopener noreferrer">
+          <span>Solicitar orçamento</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="contato" class="btn-ghost">
+          <span>Formulário de contato</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="cta-section__bg">
-      <img src="img/banners/hero-1.webp" alt="Background" loading="lazy" decoding="async" width="1200" height="800">
-    </div>
-    <div class="cta-section__overlay"></div>
-    <div class="container">
-      <div class="cta-section__content" data-animate="fade-up">
-        <span class="label label--dark">Orçamento Grátis</span>
-        <h2 class="heading-display heading-lg" style="margin-top: 16px;">
-          Solicite seu <em>Orçamento</em> Agora
-        </h2>
-        <p>
-          Atendemos em todo o Rio de Janeiro. Entre em contato e receba
-          um orçamento personalizado para suas necessidades.
-        </p>
-        <div class="cta-section__buttons">
-          <a href="https://wa.me/5521968669742?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn--gold btn--lg" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.12 1.52 5.855L0 24l6.335-1.652A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.99 0-3.87-.528-5.49-1.45l-.394-.234-3.757.98.999-3.648-.257-.408A9.82 9.82 0 012.18 12C2.18 6.58 6.58 2.18 12 2.18S21.82 6.58 21.82 12 17.42 21.82 12 21.82z"/></svg>
-            Fale pelo WhatsApp
-          </a>
-          <a href="contato" class="btn btn--outline">Formulário de Contato</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__top">
+      <div class="footer__grid">
         <div class="footer__brand">
-          <img src="img/logo.png" alt="SOS Montadores" loading="lazy" decoding="async" width="180" height="60">
-          <p>
-            Referência em montagem de móveis residenciais e corporativos no Rio de Janeiro.
-            Qualidade, pontualidade e compromisso com a excelência.
-          </p>
+          <img src="img/logo.png" alt="SOS Montadores" width="180" height="60" decoding="async" loading="lazy">
+          <p>Excelência em montagem profissional de móveis no Rio de Janeiro.</p>
         </div>
-        <div>
-          <h4 class="footer__title">Navegação</h4>
-          <div class="footer__links">
-            <a href="/">Início</a>
-            <a href="servicos">Serviços</a>
-            <a href="empresa">Empresa</a>
-            <a href="clientes">Clientes</a>
-            <a href="contato">Contato</a>
-          </div>
+        <div class="footer__col">
+          <h4>Navegação</h4>
+          <a href="/">Início</a>
+          <a href="servicos">Serviços</a>
+          <a href="empresa">Empresa</a>
+          <a href="clientes">Clientes</a>
+          <a href="contato">Contato</a>
         </div>
-        <div>
-          <h4 class="footer__title">Serviços</h4>
-          <div class="footer__links">
-            <a href="servicos">Montagem Residencial</a>
-            <a href="servicos">Montagem Corporativa</a>
-            <a href="servicos">Desmontagem</a>
-            <a href="servicos">Remanejamento</a>
-          </div>
+        <div class="footer__col">
+          <h4>Contato</h4>
+          <a href="https://wa.me/5521968669742" target="_blank" rel="noopener noreferrer">+55 21 96866-9742</a>
+          <a href="mailto:contato@sosmontadordemoveis.com.br">contato@sosmontadordemoveis.com.br</a>
+          <p>Rio de Janeiro — RJ</p>
         </div>
-        <div>
-          <h4 class="footer__title">Contato</h4>
-          <div class="footer__contact-info">
-            <div class="footer__contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <a href="https://wa.me/5521968669742" target="_blank" rel="noopener noreferrer">(21) 96866-9742</a>
-            </div>
-            <div class="footer__contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:contato@sosmontadordemoveis.com.br">contato@sosmontadordemoveis.com.br</a>
-            </div>
-            <div class="footer__contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Rio de Janeiro — RJ</span>
-            </div>
-          </div>
+        <div class="footer__col">
+          <h4>Horário</h4>
+          <p>Seg–Sex · 08h–18h<br>Sáb · 08h–14h<br>Dom · Sob agendamento</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>&copy; 2026 SOS Montador de Móveis. Todos os direitos reservados.</span>
-        <span>Desenvolvido por <a href="https://wa.me/5571992952152" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Iuri Ribeiro Silva</a></span>
+        <p>© 2026 SOS Montador de Móveis. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://wa.me/5571992952152" target="_blank" rel="noopener noreferrer">Iuri Ribeiro Silva</a></p>
       </div>
     </div>
   </footer>
-
-  <!-- WhatsApp Float -->
-  <div class="whatsapp-float">
-    <span class="whatsapp-float__tooltip">Fale conosco pelo WhatsApp!</span>
-    <a href="https://wa.me/5521968669742?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="whatsapp-float__btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.12 1.52 5.855L0 24l6.335-1.652A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.99 0-3.87-.528-5.49-1.45l-.394-.234-3.757.98.999-3.648-.257-.408A9.82 9.82 0 012.18 12C2.18 6.58 6.58 2.18 12 2.18S21.82 6.58 21.82 12 17.42 21.82 12 21.82z"/></svg>
-    </a>
-  </div>
 
   <script src="js/main.js" defer></script>
 </body>
