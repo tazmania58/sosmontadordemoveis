@@ -5,6 +5,32 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- Reveal-on-scroll (home v2) ---
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length > 0 && 'IntersectionObserver' in window) {
+    const revObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revObs.observe(el));
+  }
+  const metricCards = document.querySelectorAll('.metric-card');
+  if (metricCards.length > 0 && 'IntersectionObserver' in window) {
+    const mObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          mObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    metricCards.forEach(el => mObs.observe(el));
+  }
+
   // --- Header Scroll Effect ---
   const header = document.querySelector('.header');
   let lastScroll = 0;
