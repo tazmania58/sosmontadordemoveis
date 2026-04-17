@@ -2614,21 +2614,24 @@ body.home .footer__bottom a:hover {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--gold);
+  color: var(--coal);
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  padding: 13px 22px;
-  border: 1px solid rgba(200,150,46,0.35);
+  padding: 14px 24px;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  border: 1px solid var(--gold-light);
   border-radius: 100px;
-  transition: background .25s, border-color .25s, transform .25s;
+  transition: background .25s, border-color .25s, transform .25s, box-shadow .25s;
   font-family: var(--f-sans);
+  box-shadow: 0 8px 24px rgba(200,150,46,0.25);
 }
 
 .g-reviews-cta a:hover {
-  background: var(--gold-soft);
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
   border-color: var(--gold);
   transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(200,150,46,0.35);
 }
 
 .g-reviews-cta svg { width: 14px; height: 14px; transition: transform .2s; }
