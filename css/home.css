@@ -2506,8 +2506,12 @@ body.home .footer__bottom a:hover {
 
 .g-reviews-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .g-reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 .g-review-card {
