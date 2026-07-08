@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
       whatsMsg += `*Serviço:* ${servico}\n`;
       if (mensagem) whatsMsg += `*Mensagem:* ${mensagem}\n`;
 
-      const whatsUrl = `https://wa.me/5521968669742?text=${encodeURIComponent(whatsMsg)}`;
+      const whatsUrl = `https://wa.me/5521997211817?text=${encodeURIComponent(whatsMsg)}`;
       window.open(whatsUrl, '_blank');
 
       // Show success message
